@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b3d05383a8.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Seguro No Pagamos Cooperativa/Contacto</title>
+</head>
+<body>
+    <div class="formulario">
+        <h2>Contactanos</h2>
+
+        <form action="" name="form_contacto" onsubmit="contacto(); return false">
+                <div>
+                    <p>
+                        <label for="">Nombre</label>
+                        <input type="text" name="nombre" id="nombre_id" >
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <label for="">Apellido</label>
+                        <input type="text" name="apellido" id="apellido_id">
+                </div>
+                 <div>
+                    <p>
+                        <label for="">DNI</label>
+                        <input type="tel" name="documento" id="dni_id">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="email_id">
+                    </p>
+                </div>
+                 <div>
+                    <p>
+                        <label for="">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono_id">
+                    </p>
+                </div>
+                <div>
+                    <label for="">Tipo de seguro</label> <!--Lo uso para colocar varias opciones que el usuario pueda seleccionar-->
+                        <select name="tipo_seguro" id="tipo_seguro" onchange="valorSeguro()"> <!--ONCHANGE es para captar los cambios en el select y al ejecutarse el CHANGE se ejecuta la función valorSeguro-->
+                                <option value="">Elije un tipo de seguro</option>
+                                <option value="1">Básico</option>
+                                <option value="2">Inermedio</option>
+                                <option value="3">Premium</option>
+                        </select>
+                        <div id="valor_seguro"></div>
+                        
+                </div>
+                <div>
+                    <p>
+                        <label for="" >Asunto</label>
+                        <textarea name="asunto" id="asunto_id" cols="30" rows="10"></textarea>
+                    </p>
+                </div>
+                <p>
+               <button type="submit" class="submit">
+                    Enviar <i class="fas fa-paper-plane"></i>
+               </button>
+                <div>
+                    <p id="mensaje_alerta"></p>
+                </div>
+                 <div class="info_empresa">
+                    <p>Más información</p>
+                        <ul>
+                             <li><i class="fas fa-map-marker-alt"></i>  CABA, Argentina</li>
+                             <li><i class="fas fa-at"></i>  segurocoperativa@gmail.com</li>
+                             <li><i class="fas fa-phone-alt"></i>  1111-1111</li>
+                         </ul>
+                </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
